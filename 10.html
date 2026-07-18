@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<title>十段目 | HTMLの怪談話</title>
+
+<header>
+  <h1>十段目 🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️</h1>
+  <h2>怪談その九「帰れない部屋 — plaintext」</h2>
+</header>
+
+<main>
+  <p>最後の怪談です。決して、真似をしないでください。</p>
+  <pre><code>&lt;plaintext&gt;
+ここから先は、すべてがただの文字。
+&lt;/plaintext&gt; ← この閉じタグさえ、文字として表示される。</code></pre>
+  <p>トークナイザーが <strong>PLAINTEXT状態</strong> に入ると、<strong>他の状態へ戻る遷移は存在しません</strong>。</p>
+  <p>どんなタグを書いても、もう誰にも届かない。ドキュメントの最後まで、ただ文字が続くだけ——。</p>
+  <details>
+    <summary>種明かし</summary>
+    <p><code>&lt;plaintext&gt;</code> は太古のHTMLの遺物。仕様のトークナイザー定義で、PLAINTEXT状態だけは脱出遷移を一切持ちません。<strong>入ったら最後、二度と出られない部屋</strong>が、現代のすべてのブラウザに今も残されています。</p>
+  </details>
+</main>
+
+<footer>
+  <hr>
+  <nav>
+    <p>
+      <a href="09.html">◀ 降りる</a> |
+      <a href="11.html"><strong>最後の一段へ ▶</strong></a>
+    </p>
+  </nav>
+</footer>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<title>六段目 | HTMLの怪談話</title>
+
+<header>
+  <h1>六段目 🕯️🕯️🕯️🕯️🕯️🕯️</h1>
+  <h2>怪談その五「ノアの方舟条項」</h2>
+</header>
+
+<main>
+  <p>閉じ忘れた <code>&lt;b&gt;</code> タグを、パーサーは「作動中の書式要素リスト」に覚えていて、あとで蘇らせようとします。</p>
+  <p>では、閉じ忘れを何個も積み重ねたら…?</p>
+  <pre><code>&lt;b&gt;&lt;b&gt;&lt;b&gt;&lt;b&gt;同じ&lt;b&gt;が延々と…</code></pre>
+  <p>安心してください。<strong>同じ種類は3つまで</strong>しか方舟に乗れません。4つ目が乗り込むと、一番古いものが静かに海へ落とされます。</p>
+  <details>
+    <summary>種明かし</summary>
+    <p>WHATWG仕様に実在する <strong>Noah's Ark clause(ノアの方舟条項)</strong>。同じタグ名・名前空間・属性を持つ要素がリストに3つあると、最古のものが削除されます。仕様には「ただし(方舟の)つがい2匹ではなく、家族ごとに3つ」と注記されています。</p>
+  </details>
+</main>
+
+<footer>
+  <hr>
+  <nav>
+    <p>
+      <a href="05.html">◀ 降りる</a> |
+      <a href="07.html"><strong>次の一段へ ▶</strong></a>
+    </p>
+  </nav>
+</footer>
+</html>

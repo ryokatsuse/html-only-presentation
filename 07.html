@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<title>七段目 | HTMLの怪談話</title>
+
+<header>
+  <h1>七段目 🕯️🕯️🕯️🕯️🕯️🕯️🕯️</h1>
+  <h2>怪談その六「養子縁組アルゴリズム」</h2>
+</header>
+
+<main>
+  <p>タグの入れ子を、うっかり交差させてしまった夜。</p>
+  <pre><code>&lt;b&gt;太字 &lt;i&gt;太字イタリック&lt;/b&gt; イタリック&lt;/i&gt;</code></pre>
+  <p>DOMを覗くと、<code>&lt;i&gt;</code> が<strong>二人に増えて</strong>、片方は知らない親のもとに引き取られていました。</p>
+  <pre><code>&lt;b&gt;太字 &lt;i&gt;太字イタリック&lt;/i&gt;&lt;/b&gt;&lt;i&gt; イタリック&lt;/i&gt;</code></pre>
+  <details>
+    <summary>種明かし</summary>
+    <p>その名も <strong>adoption agency algorithm(養子縁組アルゴリズム)</strong>。交差したタグ(misnested formatting elements)を直すため、パーサーは要素を複製し、ノードを別の親へ「養子」に出します。仕様書に本当にこの名前で載っている、HTMLパーシング最恐の難所です。</p>
+  </details>
+</main>
+
+<footer>
+  <hr>
+  <nav>
+    <p>
+      <a href="06.html">◀ 降りる</a> |
+      <a href="08.html"><strong>次の一段へ ▶</strong></a>
+    </p>
+  </nav>
+</footer>
+</html>

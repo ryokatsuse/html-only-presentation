@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<title>二段目 | HTMLの怪談話</title>
+
+<header>
+  <h1>二段目 🕯️🕯️</h1>
+  <h2>怪談その一「勝手に閉じられる扉」</h2>
+</header>
+
+<main>
+  <p>ある開発者が、段落の中に箱を置こうとしました。</p>
+  <pre><code>&lt;p&gt;
+  ここは段落の中…
+  &lt;div&gt;のはずだった&lt;/div&gt;
+&lt;/p&gt;</code></pre>
+  <p>しかしDevToolsを開くと、そこには——</p>
+  <pre><code>&lt;p&gt;ここは段落の中…&lt;/p&gt;
+&lt;div&gt;のはずだった&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;</code></pre>
+  <details>
+    <summary>種明かし</summary>
+    <p><code>&lt;p&gt;</code> の内容モデルは「フレージングコンテンツのみ」。<code>&lt;div&gt;</code> が現れた瞬間、パーサーは <strong>勝手に <code>&lt;/p&gt;</code> を補って扉を閉めます</strong>。最後に残った <code>&lt;/p&gt;</code> は、行き場を失って空の段落として彷徨うのです…。</p>
+  </details>
+</main>
+
+<footer>
+  <hr>
+  <nav>
+    <p>
+      <a href="01.html">◀ 降りる</a> |
+      <a href="03.html"><strong>次の一段へ ▶</strong></a>
+    </p>
+  </nav>
+</footer>
+</html>

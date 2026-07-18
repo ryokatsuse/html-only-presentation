@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<title>五段目 | HTMLの怪談話</title>
+
+<header>
+  <h1>五段目 🕯️🕯️🕯️🕯️🕯️</h1>
+  <h2>怪談その四「入れ子になれないフォーム」</h2>
+</header>
+
+<main>
+  <p>フォームの中に、もう一つフォームを入れようとした人がいました。</p>
+  <pre><code>&lt;form action="/outer"&gt;
+  &lt;form action="/inner"&gt;
+    &lt;button&gt;送信&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/form&gt;</code></pre>
+  <p>内側のフォームは、DOMのどこを探しても——<strong>見つかりません</strong>。</p>
+  <details>
+    <summary>種明かし</summary>
+    <p>パーサーは <em>form element pointer</em> という「一つしか持てない札」を管理していて、すでにフォームが開いている間に現れた <code>&lt;form&gt;</code> 開始タグは <strong>黙って無視されます</strong>。エラーも出ません。内側のフォームは、最初から存在しなかったことになるのです。</p>
+  </details>
+</main>
+
+<footer>
+  <hr>
+  <nav>
+    <p>
+      <a href="04.html">◀ 降りる</a> |
+      <a href="06.html"><strong>次の一段へ ▶</strong></a>
+    </p>
+  </nav>
+</footer>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<title>八段目 | HTMLの怪談話</title>
+
+<header>
+  <h1>八段目 🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️</h1>
+  <h2>怪談その七「image と名乗る何か」</h2>
+</header>
+
+<main>
+  <p>深夜のコードレビューで、こんなタグを見つけました。</p>
+  <pre><code>&lt;image src="ghost.png"&gt;</code></pre>
+  <p>「<code>image</code> なんて要素、HTMLにはないはず…」</p>
+  <p>それでも——<strong>画像は表示されるのです</strong>。DevToolsに映るのは <code>&lt;img&gt;</code> の姿。</p>
+  <details>
+    <summary>種明かし</summary>
+    <p>仕様には「<code>image</code> という開始タグはパースエラー。トークンのタグ名を <code>img</code> に変更して再処理せよ」とあり、その直後にひとこと——</p>
+    <blockquote><p><strong>(Don't ask.)</strong> —— 「聞かないでくれ。」</p></blockquote>
+    <p>仕様書自身が語りたがらない過去。それがいちばん怖い。</p>
+  </details>
+</main>
+
+<footer>
+  <hr>
+  <nav>
+    <p>
+      <a href="07.html">◀ 降りる</a> |
+      <a href="09.html"><strong>次の一段へ ▶</strong></a>
+    </p>
+  </nav>
+</footer>
+</html>

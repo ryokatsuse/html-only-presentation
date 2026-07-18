@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<title>三段目 | HTMLの怪談話</title>
+
+<header>
+  <h1>三段目 🕯️🕯️🕯️</h1>
+  <h2>怪談その二「テーブルから浮かび上がる文字」</h2>
+</header>
+
+<main>
+  <p>ある夜、テーブルの中にそっとメモを残した人がいました。</p>
+  <pre><code>&lt;table&gt;
+  ここに置いたはずのメモ
+  &lt;tr&gt;&lt;td&gt;セル&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  <p>翌朝ページを開くと、メモは <strong>テーブルの外</strong>、それも <strong>テーブルより上</strong> に浮かび上がっていたのです。</p>
+  <pre><code>ここに置いたはずのメモ
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;セル&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  <details>
+    <summary>種明かし</summary>
+    <p>HTMLパーサーの仕様に実在する <strong>foster parenting(里親探し)</strong> という処理です。<code>&lt;table&gt;</code> 直下に置けないテキストは、テーブルの<strong>直前</strong>に「里子」として移動させられます。仕様書に本当に "foster parent" と書いてあります。</p>
+  </details>
+</main>
+
+<footer>
+  <hr>
+  <nav>
+    <p>
+      <a href="02.html">◀ 降りる</a> |
+      <a href="04.html"><strong>次の一段へ ▶</strong></a>
+    </p>
+  </nav>
+</footer>
+</html>

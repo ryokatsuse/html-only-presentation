@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<title>四段目 | HTMLの怪談話</title>
+
+<header>
+  <h1>四段目 🕯️🕯️🕯️🕯️</h1>
+  <h2>怪談その三「閉じタグの亡霊」</h2>
+</header>
+
+<main>
+  <p><code>&lt;br&gt;</code> は閉じられない空要素。それなのに、こう書いてしまった人がいました。</p>
+  <pre><code>一行目&lt;/br&gt;二行目</code></pre>
+  <p>「存在しないはずの閉じタグ。エラーになるはず…」</p>
+  <p>ところが——<strong>改行されるのです</strong>。</p>
+  <details>
+    <summary>種明かし</summary>
+    <p>HTMLパーサーの仕様には、<code>&lt;/br&gt;</code> を見つけたら <strong><code>&lt;br&gt;</code> 開始タグとして扱え</strong> という特例が明記されています。大昔のWebとの互換性のために、閉じタグの姿をした亡霊が、今日もブラウザの中で改行を続けているのです。</p>
+    <p>ちなみに <code>&lt;/p&gt;</code> も、開いている段落がない場所に現れると、空の <code>&lt;p&gt;&lt;/p&gt;</code> を生み出します。</p>
+  </details>
+</main>
+
+<footer>
+  <hr>
+  <nav>
+    <p>
+      <a href="03.html">◀ 降りる</a> |
+      <a href="05.html"><strong>次の一段へ ▶</strong></a>
+    </p>
+  </nav>
+</footer>
+</html>
