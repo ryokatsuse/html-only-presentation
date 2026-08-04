@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>9. おわりに — HTML怪談</title>
+	<meta name="description" content="HTML怪談 おわりに。HTMLがあれば、誰でも無料でウェブサイトを公開できる。">
+	<meta property="og:title" content="HTML怪談 9/9 — おわりに">
+	<meta property="og:description" content="HTMLがあれば、誰でも無料でウェブサイトを公開できる。35年前から変わらないことです。">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="HTML怪談">
+	<meta property="og:locale" content="ja_JP">
+	<!-- 公開URLが決まったら差し替えてください -->
+	<meta property="og:url" content="https://example.com/06.html">
+	<meta property="og:image" content="https://example.com/ogp.png">
+</head>
+<body bgcolor="#0a0a12" text="#c9c2b8" link="#9fb8d0" vlink="#8a7f9e" alink="#c46060">
+<font size="6">
+
+
+	<center>
+
+		<h1><font color="#b8a888">おわりに</font></h1>
+		<hr width="20%" size="1">
+
+		<p><small><font color="#8a7f6e">最初のウェブページは1991年。HTML も今年で35年。<br>
+		奇妙な条項が残っているのは、後方互換性を守るというのが<br>
+		そういうことだからだと思います。</font></small></p>
+
+		<h2><font color="#d0a060">HTMLがあれば、<br>
+		誰でも無料でウェブサイトを公開できる。</font></h2>
+
+		<p><small><font color="#8a7f6e">そこは35年前から変わっていません。</font></small></p>
+
+		<p><font color="#b8a888">明日は <a href="https://2026.html.energy/">HTML Day</a>。<br>
+		手を動かしに行きましょう。</font></p>
+
+		<p>
+			<a href="05-tanemakashi.html" accesskey="p">&lt; 前へ</a> ／
+			<a href="index.html" accesskey="n" autofocus>最初に戻る ↺</a>
+		</p>
+
+		<p><small><font color="#857c6a">最後にもうひとつだけ。<br>
+		仕様には、一度開くと二度と閉じられない要素があります。</font></small></p>
+
+	</center>
+
+	<!-- font 要素は閉じません。この先はもう閉じられないので。 -->
+	<!-- ここから先は plaintext の中身がそのまま表示されるため、字下げしていません -->
+	<plaintext>
+</plaintext>
+</body>
+</html>
+
+上に見えている終了タグは、もう効いていません。
+<plaintext> が開いた時点でパーサは PLAINTEXT 状態に入り、
+そこから抜ける方法は仕様のどこにも書かれていません。
+
+<a href="index.html">この行も、もうリンクではありません。</a>
+
+ここから先は、ずっとテキストのままです。
+
+                                        — HTML怪談 完 —
