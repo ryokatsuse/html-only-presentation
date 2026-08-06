@@ -3,42 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>4. 第三話 存在しないタグ — HTML怪談</title>
-	<meta name="description" content="HTML怪談 第三話。HTMLに存在しない &lt;image&gt; タグと、仕様書に書かれた「(Don't ask.)」の話。">
-	<meta property="og:title" content="HTML怪談 4/9 — 第三話 存在しないタグ">
-	<meta property="og:description" content="&lt;image&gt; という要素はHTMLに存在しません。それでも書くと画像が出ます。仕様は (Don't ask.) と書いています。">
+	<title>当時は、略すのが普通だった — なぜ &lt;img&gt;なのか</title>
+	<meta name="description" content="p, a, li, hr。短い綴りはCERNのSGMLguidから受け継いだ習慣で、手打ち前提の時代の名前だった。ただしimgはその系譜の外から来ている。">
+	<meta property="og:title" content="なぜ &lt;img&gt;なのか — 当時は、略すのが普通だった">
+	<meta property="og:description" content="p, a, li, hr。短い綴りはCERNのSGMLguid譲り。ただしimgだけは、その系譜の外から来ている。">
 	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="HTML怪談">
+	<meta property="og:site_name" content="なぜ &lt;img&gt;なのか">
 	<meta property="og:locale" content="ja_JP">
 	<!-- 公開URLが決まったら差し替えてください -->
 	<meta property="og:url" content="https://example.com/04.html">
 	<meta property="og:image" content="https://example.com/ogp.png">
 </head>
-<body bgcolor="#0a0a12" text="#c9c2b8" link="#9fb8d0" vlink="#8a7f9e" alink="#c46060">
+<body bgcolor="#0a0a12" text="#c9c2b8" link="#9fb8d0" vlink="#8a7f9e" alink="#c9c2b8">
 <font size="6">
 
 	<center>
 
-		<p><small><font color="#8a7f6e">第三話</font></small></p>
-		<h1><font color="#b8a888">存在しないタグ</font></h1>
+		<h1><font color="#b8a888">当時は、略すのが普通だった？</font></h1>
 		<hr width="20%" size="1">
 
-		<p><code><big>&lt;image&gt;</big></code> という要素は、HTMLに<strong>存在しません</strong>。<br>
-		それでも書くと、<font color="#cf5050">画像が出ます。</font></p>
+		<p><small>そもそも<code><big>img</big></code>だけが特別なわけではない。</small></p>
 
-		<p><image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='140'%20height='160'%3E%3Cpath%20d='M20%20152%20V70%20a50%2050%200%200%201%20100%200%20V152%20l-25-18%20-25%2018%20-25-18%20-25%2018%20z'%20fill='%23c9c2b8'/%3E%3Ccircle%20cx='52'%20cy='72'%20r='9'%20fill='%230a0a12'/%3E%3Ccircle%20cx='88'%20cy='72'%20r='9'%20fill='%230a0a12'/%3E%3C/svg%3E" alt="幽霊" width="96" height="110"></p>
-
-		<p><small><font color="#857c6a">ソースは <code><big>&lt;image&nbsp;src=…&gt;</big></code>。DevTools に立っているのは <code><big>&lt;img&gt;</big></code>。<br>
-		パーサが書き換えているからです。その手順が、仕様にあります。</font></small></p>
-
-		<p><i><font size="5" color="#8fa8c0"><q>Change the token's tag name to "img" and reprocess it. <strong>(Don't ask.)</strong></q></font></i><br>
-		<small><cite><font color="#6c7c8c">— <a href="https://html.spec.whatwg.org/multipage/parsing.html#parsing-main-inbody">HTML Standard, 13.2.6.4.7</a></font></cite></small></p>
-
-		<p>Don't ask. <font color="#cf5050">訊くな</font>、と書いてあります。</p>
-
+		<table border="1" cellpadding="12">
+			<tr>
+				<td><font size="5"><code>&lt;p&gt;</code></font></td>
+				<td><font size="5">Paragraph</font></td>
+			</tr>
+			<tr>
+				<td><font size="5"><code>&lt;a&gt;</code></font></td>
+				<td><font size="5">Anchor</font></td>
+			</tr>
+			<tr>
+				<td><font size="5"><code>&lt;li&gt;</code></font></td>
+				<td><font size="5">List Item</font></td>
+			</tr>
+			<tr>
+				<td><font size="5"><code>&lt;hr&gt;</code></font></td>
+				<td><font size="5">Horizontal Rule</font></td>
+			</tr>
+		</table>
 		<p>
 			<a href="03.html" accesskey="p">&lt; 前へ</a> ／
-			<a href="04b.html" accesskey="n" autofocus>次へ &gt;</a>
+			<a href="05.html" accesskey="n" autofocus>次へ &gt;</a>
 		</p>
 
 	</center>

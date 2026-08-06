@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ブラウザはどう実装しているか(AI調べ) — なぜ &lt;img&gt;なのか</title>
+	<meta name="description" content="BlinkとWebKitのソースには同じコメントが残り、Geckoにはimage専用のエラーがある。0.2%のための読み替えが、いまも3つのエンジンで動いている。">
+	<meta property="og:title" content="なぜ &lt;img&gt;なのか — ブラウザはどう実装しているか(AI調べ)">
+	<meta property="og:description" content="Apparently we're not supposed to ask. 0.2%のための読み替えが、いまも3つのエンジンで動いている。">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="なぜ &lt;img&gt;なのか">
+	<meta property="og:locale" content="ja_JP">
+	<!-- 公開URLが決まったら差し替えてください -->
+	<meta property="og:url" content="https://example.com/08.html">
+	<meta property="og:image" content="https://example.com/ogp.png">
+</head>
+<body bgcolor="#0a0a12" text="#c9c2b8" link="#9fb8d0" vlink="#8a7f9e" alink="#c9c2b8">
+<font size="6">
+
+	<center>
+
+		<h1><font color="#b8a888">ブラウザはどう実装しているか(AI調べ)</font></h1>
+		<hr width="20%" size="1">
+
+		<table cellpadding="0" align="center">
+			<tr>
+				<td align="left">
+					<ul>
+						<li>BlinkとWebKitには、同じコメントが1行入っている
+							<ul>
+								<li><small><a href="https://github.com/chromium/chromium/blob/ff741073be8156da24be57cf69a23d8f3c4fda95/third_party/blink/renderer/core/html/parser/html_tree_builder.cc#L1035-L1039">Blink <code>html_tree_builder.cc</code></a></small></li>
+								<li><small><a href="https://github.com/WebKit/WebKit/blob/e4bf39e5584a482937da4019d5e7bc7a15822580/Source/WebCore/html/parser/HTMLTreeBuilder.cpp#L829-L833">WebKit <code>HTMLTreeBuilder.cpp</code></a></small></li>
+							</ul>
+						</li>
+						<li>Geckoは<code>image</code>専用のエラーを出して<code>img</code>にする
+							<ul>
+								<li><small><a href="https://github.com/mozilla-firefox/firefox/blob/d13776d32131117c3bb802550c5c776ff92c28e2/parser/html/javasrc/TreeBuilder.java#L2188-L2191">Gecko <code>TreeBuilder.java</code></a></small></li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+
+		<p>
+			<a href="07.html" accesskey="p">&lt; 前へ</a> ／
+			<a href="09.html" accesskey="n" autofocus>次へ &gt;</a>
+		</p>
+
+	</center>
+
+</font>
+</body>
+</html>

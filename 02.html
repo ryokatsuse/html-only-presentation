@@ -3,42 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>2. 第一話 表から追い出される行 — HTML怪談</title>
-	<meta name="description" content="HTML怪談 第一話。table の中でセルに入っていない内容は、foster parenting によって table の外へ移される。">
-	<meta property="og:title" content="HTML怪談 2/9 — 第一話 表から追い出される行">
-	<meta property="og:description" content="table の中に書いた行が、エラーにならず表の外へ移されます。仕様はこれを foster parenting と呼びます。">
+	<title>imageと書いても表示される — なぜ &lt;img&gt;なのか</title>
+	<meta name="description" content="HTMLに存在しない &lt;image&gt;を書いても画像は表示される。仕様はそれをimgに書き換えたうえで (Don't ask.)と書いている。">
+	<meta property="og:title" content="なぜ &lt;img&gt;なのか — imageと書いても表示される">
+	<meta property="og:description" content="&lt;image&gt;はHTMLに存在しない。それでも書けば画像が出る。仕様の指示は「imgに書き換えて、訊くな」。">
 	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="HTML怪談">
+	<meta property="og:site_name" content="なぜ &lt;img&gt;なのか">
 	<meta property="og:locale" content="ja_JP">
 	<!-- 公開URLが決まったら差し替えてください -->
 	<meta property="og:url" content="https://example.com/02.html">
 	<meta property="og:image" content="https://example.com/ogp.png">
 </head>
-<body bgcolor="#0a0a12" text="#c9c2b8" link="#9fb8d0" vlink="#8a7f9e" alink="#c46060">
+<body bgcolor="#0a0a12" text="#c9c2b8" link="#9fb8d0" vlink="#8a7f9e" alink="#c9c2b8">
 <font size="6">
 
 	<center>
 
-		<p><small><font color="#8a7f6e">第一話</font></small></p>
-		<h1><font color="#b8a888">表から追い出される行</font></h1>
+		<h1><font color="#b8a888"><code><big>&lt;image&gt;</big></code>と書いても表示される</font></h1>
 		<hr width="20%" size="1">
+		<p><image src="images/infixer.jpg" alt="infixer のアイコン" width="140" height="140"></p>
 
-		<p><code><big>&lt;table&gt;</big></code> の中に、<code><big>&lt;td&gt;</big></code> に入れ忘れた行を書いてしまう。<br>
-		その行はエラーにならず、<font color="#cf5050">表の外へ移されます。</font></p>
-
-		<p><i><font size="5" color="#8fa8c0"><q>…let adjusted insertion location be inside last table's parent node,<br>
-		<strong>immediately before last table</strong></q></font></i><br>
-		<small><cite><font color="#6c7c8c">— HTML Standard, 13.2.6.1</font></cite></small></p>
-
-		<p><small><font color="#857c6a">仕様はこの移動を <i>foster parenting</i>（里親に出す）と呼びます。</font></small></p>
-
-		<table border="1" cellpadding="16">
-			<tr><td>ここは td の中</td></tr>
-			<font color="#d0a060">この行は td に入れ忘れました</font>
+		<table cellpadding="0" align="center">
+			<tr>
+				<td align="left">
+					<ul>
+						<li><small>view-sourceでは<code><big>&lt;image&gt;</big></code>と書いている</small></li>
+						<li><small>DevToolsでは<code><big>&lt;img&gt;</big></code>と省略されている</small></li>
+					</ul>
+				</td>
+			</tr>
 		</table>
 
-		<p><small><font color="#857c6a">表の上に出ているこの行は、ソースでは <code><big>&lt;/tr&gt;</big></code> の後・<code><big>&lt;/table&gt;</big></code> の前、<br>
-		つまり<strong>表の中</strong>に書いてあります。DevTools で見ても表の外に立っています。</font></small></p>
+		<p><small>仕様をみる。
+		</small></p>
+
+		<p><i><font size="5" color="#8fa8c0"><q>Change the token's tag name to "img" and reprocess it. <strong>(Don't ask.)</strong></q></font></i><br>
+		<small><font color="#6c7c8c"><a href="https://html.spec.whatwg.org/multipage/parsing.html#parsing-main-inbody">HTML Standard, 13.2.6.4.7</a></font></small></p>
 
 		<p>
 			<a href="01.html" accesskey="p">&lt; 前へ</a> ／

@@ -3,46 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>6. もうひとつの image — HTML怪談</title>
-	<meta name="description" content="HTML怪談 幕間。SVGの中では image が改名されない。">
-	<meta property="og:title" content="HTML怪談 6/9 — もうひとつの image">
-	<meta property="og:description" content="svg の開始タグをひとつ挟むだけで、image は img に化けなくなります。">
+	<title>&lt;img&gt;タグのプロポーザル — なぜ &lt;img&gt;なのか</title>
+	<meta name="description" content="1993年2月25日、Marc Andreessenがwww-talkにIMGタグを提案した。綴りはこの一通で決まった。">
+	<meta property="og:title" content="なぜ &lt;img&gt;なのか — &lt;img&gt;タグのプロポーザル">
+	<meta property="og:description" content="1993年2月25日のwww-talk。この一通でimgという綴りが決まった。">
 	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="HTML怪談">
+	<meta property="og:site_name" content="なぜ &lt;img&gt;なのか">
 	<meta property="og:locale" content="ja_JP">
 	<!-- 公開URLが決まったら差し替えてください -->
 	<meta property="og:url" content="https://example.com/05.html">
 	<meta property="og:image" content="https://example.com/ogp.png">
 </head>
-<body bgcolor="#0a0a12" text="#c9c2b8" link="#9fb8d0" vlink="#8a7f9e" alink="#c46060">
+<body bgcolor="#0a0a12" text="#c9c2b8" link="#9fb8d0" vlink="#8a7f9e" alink="#c9c2b8">
 <font size="6">
-
 
 	<center>
 
-		<p><small><font color="#8a7f6e">幕間</font></small></p>
-		<h1><font color="#b8a888">もうひとつの image</font></h1>
+		<h1><font color="#b8a888"><code><big>&lt;img&gt;</big></code>タグのプロポーザル</font></h1>
 		<hr width="20%" size="1">
 
-		<p><code><big>&lt;image&gt;</big></code> が書き換えられない場所が、<br>
-		ひとつだけあります。<font color="#cf5050">SVG の中</font>です。</p>
+		<p><small>1993年2月25日、Marc Andreessenがwww-talkに出した提案</small></p>
 
-		<table border="1" cellpadding="16">
-			<tr>
-				<td align="center"><small><font color="#8a7f6e">HTML に直接</font></small><br>
-				<image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='140'%20height='160'%3E%3Cpath%20d='M20%20152%20V70%20a50%2050%200%200%201%20100%200%20V152%20l-25-18%20-25%2018%20-25-18%20-25%2018%20z'%20fill='%23c9c2b8'/%3E%3Ccircle%20cx='52'%20cy='72'%20r='9'%20fill='%230a0a12'/%3E%3Ccircle%20cx='88'%20cy='72'%20r='9'%20fill='%230a0a12'/%3E%3C/svg%3E" alt="幽霊" width="87" height="100"><br>
-				<small><font color="#cf5050">img に化けている</font></small></td>
-				<td align="center"><small><font color="#8a7f6e">svg の中に</font></small><br>
-				<svg width="87" height="100"><image href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='140'%20height='160'%3E%3Cpath%20d='M20%20152%20V70%20a50%2050%200%200%201%20100%200%20V152%20l-25-18%20-25%2018%20-25-18%20-25%2018%20z'%20fill='%23c9c2b8'/%3E%3Ccircle%20cx='52'%20cy='72'%20r='9'%20fill='%230a0a12'/%3E%3Ccircle%20cx='88'%20cy='72'%20r='9'%20fill='%230a0a12'/%3E%3C/svg%3E" width="87" height="100"/></svg><br>
-				<small><font color="#d0a060">image のまま</font></small></td>
-			</tr>
-		</table>
+		<p><img src="images/img-proposed.png" alt="www-talkのアーカイブ。Marc Andreessenによる「proposed new tag: IMG」の投稿本文" width="440" height="365"></p>
 
-		<p>境目は <code><big>&lt;svg&gt;</big></code> の開始タグ、それだけ。</p>
+		<small><font color="#6c7c8c"><a href="http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html">www-talk, 1993-02-25</a></font></small></p>
 
 		<p>
-			<a href="04b.html" accesskey="p">&lt; 前へ</a> ／
-			<a href="05b.html" accesskey="n" autofocus>次へ &gt;</a>
+			<a href="04.html" accesskey="p">&lt; 前へ</a> ／
+			<a href="06.html" accesskey="n" autofocus>次へ &gt;</a>
 		</p>
 
 	</center>
