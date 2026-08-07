@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>書き換えているのは誰か — なぜ &lt;img&gt;なのか</title>
-	<meta name="description" content="同じ &lt;image&gt;でも、HTMLパーサ・createElement・XHTML・SVGで結果が変わる。書き換えているのはHTMLパーサだけ。">
-	<meta property="og:title" content="なぜimgなのか — 書き換えているのは誰か">
-	<meta property="og:description" content="同じ7文字が、通り道によって画像が表示されたり、されなかったりする。">
+	<link rel="icon" href="images/infixer.jpg">
+	<title>当時は、略すのが普通だった — なぜ &lt;img&gt;なのか</title>
+	<meta name="description" content="p, a, li, hr。短い綴りはCERNのSGMLguidから受け継いだ習慣で、手打ち前提の時代の名前だった。ただしimgはその系譜の外から来ている。">
+	<meta property="og:title" content="なぜimgなのか — 当時は、略すのが普通だった">
+	<meta property="og:description" content="p, a, li, hr。短い綴りはCERNのSGMLguid譲り。ただしimgだけは、その系譜の外から来ている。">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="なぜ &lt;img&gt;なのか">
 	<meta property="og:locale" content="ja_JP">
@@ -21,44 +22,29 @@
 
 	<center>
 
-		<h1><font color="#b8a888">どこで書き換えられているの</font></h1>
+		<h1><font color="#b8a888">当時は、略すのが普通だった？</font></h1>
+		<hr width="20%" size="1">
+
+		<p><small>そもそも<code><big>img</big></code>だけが特別なわけではない。</small></p>
 
 		<table border="1" cellpadding="12">
 			<tr>
-				<td><font size="4">方法</font></td>
-				<td><font size="4">ブラウザでの表示</font></td>
-				<td><font size="4">DOMでは何になるか</font></td>
+				<td><font size="5"><code>&lt;p&gt;</code></font></td>
+				<td><font size="5">Paragraph</font></td>
 			</tr>
-
 			<tr>
-				<td><font size="4">HTMLで書く<br>
-				<code>&lt;image src=…&gt;</code></font></td>
-				<td align="center">
-					<image src="images/infixer.jpg" alt="infixer のアイコン" width="80" height="80"><br>
-					<small><font color="#d0a060">画像が表示される</font></small>
-				</td>
-				<td><font size="4" color="#d0a060">HTMLImageElement</font></td>
+				<td><font size="5"><code>&lt;a&gt;</code></font></td>
+				<td><font size="5">Anchor</font></td>
 			</tr>
-
 			<tr>
-				<td><font size="4"><code>JavaScriptから挿入</font></td>
-				<td align="center">
-					<span id="js-demo"></span>
-					<script>
-						const imageElement = document.createElement('image');
-						imageElement.setAttribute('src', 'images/infixer.jpg');
-						imageElement.setAttribute('width', '80');
-						imageElement.setAttribute('height', '80');
-						document.getElementById('js-demo').appendChild(imageElement);
-					</script>
-					<br>
-					<small>画像が表示されない</small>
-				</td>
-				<td><font size="4">HTMLUnknownElement</font></td>
+				<td><font size="5"><code>&lt;li&gt;</code></font></td>
+				<td><font size="5">List Item</font></td>
+			</tr>
+			<tr>
+				<td><font size="5"><code>&lt;hr&gt;</code></font></td>
+				<td><font size="5">Horizontal Rule</font></td>
 			</tr>
 		</table>
-
-		<p>書き換えているのは、HTMLパーサー</p>
 		<p>
 			<a href="02.html" accesskey="p">&lt; 前へ</a> ／
 			<a href="04.html" accesskey="n" autofocus>次へ &gt;</a>

@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>プロポーザルで議論されたこと — なぜ &lt;img&gt;なのか</title>
-	<meta name="description" content="1993年2月25日から3月12日まで。www-talkのIMGスレッドを時系列で追う。綴りの話は初日だけで、あとは設計の論争だった。">
-	<meta property="og:title" content="なぜimgなのか — プロポーザルで議論されたこと">
-	<meta property="og:description" content="IMAGE案は初日に出た。だが議論は設計へ移り、決着はメールではなくMosaicのリリースでついた。">
+	<link rel="icon" href="images/infixer.jpg">
+	<title>なぜ&lt;image&gt;タグと書けるのか — なぜ &lt;img&gt;なのか</title>
+	<meta name="description" content="Mosaicはimageを受け付けない。Netscapeがimgとimageを両方タグとして実装していた。1998年公開のソースに定義が残る。">
+	<meta property="og:title" content="なぜimgなのか — なぜimageタグと書けるのか">
+	<meta property="og:description" content="Mosaicはimageを受け付けない。動かしていたのはNetscape。1998年公開のソースに定義が残る。">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="なぜ &lt;img&gt;なのか">
 	<meta property="og:locale" content="ja_JP">
@@ -21,25 +22,20 @@
 
 	<center>
 
-		<h1><font color="#b8a888">プロポーザルで議論されたこと</font></h1>
+		<h1><font color="#b8a888">なぜ<code>&lt;image&gt;</code>タグと書けるのか</font></h1>
 		<hr width="20%" size="1">
-
 
 		<table cellpadding="0" align="center">
 			<tr>
 				<td align="left">
 					<ul>
-						<li>画像専用のタグが要るのかどうかの議論が中心</li>
-						<li>結論が出ないまま、<a href="http://1997.webhistory.org/www.lists/www-talk.1993q1/0262.html">Mosaicが実装してリリース</a></li>
-						<li>略すかどうかは、誰も議論していない</li>
+						<li><code>&lt;IMAGE&gt;</code>要素は、<a href="https://www.w3.org/MarkUp/HTMLPlus/htmlplus_21.html">HTML+の草案</a>（1993年）に実在した</li>
+						<li>Netscapeは両方をタグとして実装していた。<a href="https://github.com/zii/netscape/blob/master/lib/libparse/pa_tags.h#L39">1998年公開のソース</a>に定義が残る</li>
+						<li><a href="https://lists.w3.org/Archives/Public/public-whatwg-archive/2007Mar/0605.html">2007年には全ブラウザ</a>が同じ挙動に</li>
 					</ul>
 				</td>
 			</tr>
 		</table>
-
-		<p><font color="#d0a060">省略は、論点ではなく前提だったのかも。</font><br>
-		なのでメーリングリストとしては発言がなかった？</p>
-
 		<p>
 			<a href="05.html" accesskey="p">&lt; 前へ</a> ／
 			<a href="07.html" accesskey="n" autofocus>次へ &gt;</a>

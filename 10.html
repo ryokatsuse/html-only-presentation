@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/infixer.jpg">
 	<title>まとめ — なぜ &lt;img&gt;なのか</title>
-	<meta name="description" content="調査結果のまとめ。imgの綴りも、imageと書けてしまう理由も、記録には残っていない。動くことと正しいことは別。">
+	<meta name="description" content="調査結果のまとめ。imgの綴りはAndreessenの初手で決まり、imageと書けるのはNetscape時代からの読み替え。二度とも、実装が仕様を決めた。">
 	<meta property="og:title" content="なぜimgなのか — まとめ">
-	<meta property="og:description" content="動くことと、正しいことは別。そして明確な理由は、いまも謎のまま。">
+	<meta property="og:description" content="仕様が実装を決めたのではなく、実装と既存コンテンツが仕様を決めた。動くことと、正しいことは別。">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="なぜ &lt;img&gt;なのか">
 	<meta property="og:locale" content="ja_JP">
@@ -28,11 +29,9 @@
 			<tr>
 				<td align="left">
 					<ul>
-						<li>短い名前は、HTMLができる前からの習慣ではあった</li>
-						<li><code>img</code>タグの提案プロポーザル内では、なぜ略したのかは書かれていない</li>
-						<li><code>image</code>として書けるようになった理由は、分からなかった</li>
-						<li>いまも<code>image</code>表示されるのは、後方互換性のため</li>
-						<li>ただしパースエラーなので、正しいHTMLではない</li>
+						<li>当時の流れから推測するに、そこまで省略云々が重要視されていたわけではない</li>
+						<li><code>&lt;image&gt;</code>はHTMLの仕様としてはパースエラー扱いなので、正しいとはいえない</li>
+						<li>ただ、これまでの流れを見るとどちらも正しいとも言える</li>
 					</ul>
 				</td>
 			</tr>
